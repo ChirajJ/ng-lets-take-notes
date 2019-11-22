@@ -1,0 +1,19 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidenav style="min-width: 25%;text-align: center;">
+    <h1 class="mat-h1" style="padding: 10px;">Menu</h1>
+    <mat-nav-list>
+      <mat-list-item style="display: flex; justify-content: center;">
+        <a>adasdsas</a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" style="justify-content: flex-start;">
+      <button mat-icon-button style="flex: 0.05;">
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      </button>
+      <span style="flex: 0.025;"></span>
+      <h1 style="flex: 0.945;">Let's take notes</h1>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
