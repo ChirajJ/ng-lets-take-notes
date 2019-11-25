@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+mat-card {
+    min-width: 25%;
+}
+
+mat-card-content {
+    display: flex;
+    justify-content: center;
+}
+
+mat-error {
+    color: orange;
+}

@@ -2,8 +2,8 @@
   <mat-sidenav #sidenav style="min-width: 25%;text-align: center;">
     <h1 class="mat-h1" style="padding: 10px;">Menu</h1>
     <mat-nav-list>
-      <mat-list-item style="display: flex; justify-content: center;">
-        <a>adasdsas</a>
+      <mat-list-item *ngFor = "let nav of navList" [routerLink] = 'nav.route' style="display: flex; justify-content: center;">
+        <a>{{nav.title}}</a>
       </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
@@ -15,5 +15,7 @@
       <span style="flex: 0.025;"></span>
       <h1 style="flex: 0.945;">Let's take notes</h1>
     </mat-toolbar>
+    <ng-template [cdkPortalOutlet]="selectedPortal"></ng-template>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
