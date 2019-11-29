@@ -23,7 +23,7 @@ export class SharedService {
   navMainList: INavigation[] = [
     {
       title: 'Notebooks',
-      route: '/notebooks'
+      route: '/ltn-app/notebooks'
     },
     {
       title: 'Logout',

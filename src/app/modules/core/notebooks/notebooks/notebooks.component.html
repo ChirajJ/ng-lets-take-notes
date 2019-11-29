@@ -1,1 +1,24 @@
-<p>notebooks works!</p>
+<div class="headline">
+    <h3 class="body-2">Notebooks</h3>
+</div>
+<div class = "container">
+    <mat-card 
+        *ngFor = 'let card of cards; let i = index;' 
+        (click) = "viewNotebook(card)"
+        [class.mat-elevation-z4] = "mouseOvered[i]"
+        (mouseover) = "mouseOvered[i] = true"
+        (mouseout) = "mouseOvered[i] = false"
+    >
+        {{card.title}}
+    </mat-card>
+    <mat-card 
+        [class.mat-elevation-z4] = "mouseOveredAdd"
+        (mouseover) = "mouseOveredAdd = true"
+        (mouseout) = "mouseOveredAdd = false"
+    >
+        <button mat-icon-button>
+            <mat-icon aria-hidden="false" aria-label="Example thumbs up SVG icon">add_circle</mat-icon>
+        </button>
+    </mat-card>
+</div>
+<router-outlet></router-outlet>

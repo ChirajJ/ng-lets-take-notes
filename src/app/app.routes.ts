@@ -2,18 +2,18 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LogoutComponent } from './shared/components/logout/logout.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { FourOFourComponent } from './shared/components/error/four-o-four/four-o-four.component';
 
 const appRoutes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: '/notebooks'
+        redirectTo: '/ltn-app'
     },
     {
-        path: 'notebooks',
+        path: 'ltn-app',
         canActivate: [ AuthGuardService ],
-        loadChildren: () => import('./modules/core/notebooks/notebooks.module').then(mod => mod.NotebooksModule),
-        pathMatch: 'full'
+        loadChildren: () => import('./modules/core/core.module').then(mod => mod.CoreModule),
     },
     {
         path: 'login',
@@ -22,6 +22,10 @@ const appRoutes: Routes = [
     {
         path: 'logout',
         component: LogoutComponent
+    },
+    {
+        path: '**',
+        component: FourOFourComponent
     }
 ];
 

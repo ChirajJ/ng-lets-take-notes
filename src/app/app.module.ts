@@ -11,12 +11,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoaderComponent } from './shared/components/loader/loader.component';
 import { LogoutComponent } from './shared/components/logout/logout.component';
+import { FourOFourComponent } from './shared/components/error/four-o-four/four-o-four.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoaderComponent,
-    LogoutComponent
+    LogoutComponent,
+    FourOFourComponent,
   ],
   imports: [
     BrowserModule,

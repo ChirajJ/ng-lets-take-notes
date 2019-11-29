@@ -1,0 +1,28 @@
+.headline {
+    display: flex;
+    justify-content: center;
+    margin: 1%;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0.5%;
+    flex-wrap: wrap;
+}
+
+mat-card {
+    width: 150px;
+    height: 150px;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+mat-card :hover {
+    /* mat-elevation(8); */
+}
